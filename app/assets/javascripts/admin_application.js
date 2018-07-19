@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require admin/bootstrap.bundle.min
+//= require admin/jquery.easing.min
+//= require admin/sb-admin.min
 //= require bootstrap
 //= require rails-ujs
 //= require turbolinks

@@ -5,3 +5,35 @@ en:
       logo: "logo"
       settings: "Settings"
       logout: "Logout"
+    admin_header:
+      admin_page: "Admin Page"
+      dashboard: "Dashboard"
+      users: " Users"
+    admin_layout:
+      leave: "Ready to Leave?"
+      guilde_logout: "Select \"Logout\" below if you are ready to end your current session."
+      cancel: "Cancel"
+      logout: "Logout"
+      dashboard: "Dashboard"
+      copyright: "Copyright © Your Website 2018"
+  admin:
+    users:
+      index:
+        users: "Users"
+        stt: "STT"
+        name: "Name"
+        email: "Email"
+        action: "Actions"
+        edit_user: "Edit user"
+        show_user: "Show user"
+        delete_user: "Delete user"
+        you_sure: "Are you sure?"
+      show:
+        information_user: "Information about account "
+      edit:
+        update: "Update"
+        name: "Name: "
+        email: "Email: "
+        avatar: "Avatar: "
+      load_user:
+        user_not_exist: "User not exist in database"
