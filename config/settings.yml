@@ -3,3 +3,5 @@ users:
     min_length: 10
   avatar:
     size: 50
+  pages:
+    per: 10
