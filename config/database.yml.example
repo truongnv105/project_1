@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: root
+  password: 123456
+  host: localhost
+
+development:
+  <<: *default
+  database: ht_bamboo
+
+test:
+  <<: *default
+  database: ht_bamboo
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: db/production.sqlite3

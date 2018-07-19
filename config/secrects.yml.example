@@ -1,0 +1,32 @@
+# Be sure to restart your server when you modify this file.
+
+# Your secret key is used for verifying the integrity of signed cookies.
+# If you change this key, all old signed cookies will become invalid!
+
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+# You can use `rails secret` to generate a secure secret key.
+
+# Make sure the secrets in this file are kept private
+# if you're sharing your code publicly.
+
+# Shared secrets are available across all environments.
+
+# shared:
+#   api_key: a1B2c3D4e5F6
+
+# Environmental secrets are only available for that specific environment.
+
+development:
+  secret_key_base: 710d4970ab14898261da9294e0272959a6057ce8c79cd24075e898bf5236ef70842d1c399425e2482aecdf1e1569c67fdecaba95ff13021575a59e654bccf78b
+
+test:
+  secret_key_base: b4aa09b037e65a6313d6a4bc385a99132c28de60524e7dd0fa9bc6613221e7120ad54cc512c046184a148a43cdc3c17b6620b2c53ef095965951aae1924d9c23
+
+# Do not keep production secrets in the unencrypted secrets file.
+# Instead, either read values from the environment.
+# Or, use `bin/rails secrets:setup` to configure encrypted secrets
+# and move the `production:` environment over there.
+
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>

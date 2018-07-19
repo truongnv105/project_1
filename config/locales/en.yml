@@ -16,6 +16,7 @@ en:
       logout: "Logout"
       dashboard: "Dashboard"
       copyright: "Copyright © Your Website 2018"
+      project: "PROJECT"
   admin:
     users:
       index:
