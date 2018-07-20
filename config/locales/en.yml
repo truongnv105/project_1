@@ -38,3 +38,13 @@ en:
         avatar: "Avatar: "
       load_user:
         user_not_exist: "User not exist in database"
+    sessions:
+      new:
+        login: "Login"
+        email: "Email address"
+        password: "Password"
+        login_admin: "Admin login"
+      create:
+        invalid_data: "Email/password invalid"
+      destroy:
+        logout_success: "You have just logout success!"

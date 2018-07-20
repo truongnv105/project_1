@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#"><%= t ".dashboard" %></a>
+            <%= link_to t(".dashboard"), "#"%>
           </li>
           <li class="breadcrumb-item active"><%= yield :title %></li>
         </ol>
@@ -47,7 +47,7 @@
             <div class="modal-body"><%= t ".guilde_logout" %></div>
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal"><%= t ".cancel" %></button>
-              <%= link_to t(".logout"), destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+              <%= link_to t(".logout"), admin_logout_path, method: :delete, class: "btn btn-primary" %>
             </div>
           </div>
         </div>
