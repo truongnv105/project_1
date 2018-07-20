@@ -5,7 +5,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("home"), root_path %></li>
         <% if user_signed_in? %>
-          <li><%= image_tag current_user.avatar.url, size: Settings.users.avatar.size %></li>
+          <li><%= image_tag current_user.avatar.url, size: Settings.users.avatar.size if current_user.avatar.present? %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t "account" %><b class="caret"></b>
@@ -20,6 +20,7 @@
           </li>
         <% else %>
           <li><%= link_to t(".login"), new_user_session_path %></li>
+          <li><%= link_to t(".signup"), new_user_registration_path %></li>
         <% end %>
       </ul>
     </nav>

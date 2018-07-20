@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   end
 
   root "static_pages#home"
-  devise_for :users
+  get "/auth/:provider/callback", to: "sessions#create"
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",
+    registrations: "users/registrations" }
 end
