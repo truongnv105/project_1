@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :admin do
     get "/dashboards", to: "dashboards#index"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+
     resources :users, except: %i(new create)
   end
 

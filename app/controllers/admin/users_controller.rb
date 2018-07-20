@@ -1,4 +1,5 @@
-class Admin::UsersController < Admin::ApplicationController
+class Admin::UsersController < Admin::AdminApplicationController
+  before_action :admin_login?
   before_action :load_user, except: %i(index new create)
 
   def index

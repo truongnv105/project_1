@@ -5,3 +5,6 @@ users:
     size: 50
   pages:
     per: 10
+admin:
+  email:
+    max_length: 255

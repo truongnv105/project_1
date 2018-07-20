@@ -1,7 +1,6 @@
-class Admin::DashboardsController < Admin::ApplicationController
+class Admin::DashboardsController < Admin::AdminApplicationController
+  before_action :admin_login?
+
   def index
-    unless !current_user.nil? && current_user.is_admin?
-      redirect_to root_path
-    end
   end
 end
