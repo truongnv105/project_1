@@ -54,6 +54,7 @@ en:
         password_confirmation: "Password Confirmation: "
         notice_password: " characters minimum"
         offs: "off"
+        phone_number: "Phone number: "
       edit:
         edit: "Edit: "
         name: "Name: "
@@ -72,6 +73,16 @@ en:
         back: "Back"
         unhappy: "Unhappy?"
         offs: "off"
+        linking_facebook: "Add linking with facebook"
+        linking_google: "Add linking with google"
+        linking_twitter: "Add linking with twitter"
+        stt: "STT"
+        social: "Social"
+        email: "Email"
+        action: "Action"
+        disable: "Disable"
+        social_linked: "Socials Linked"
+        phone_number: "Phone number: "
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
@@ -81,6 +92,7 @@ en:
         email: "Email: "
         offs: "off"
         password: "Password: "
+        logins: "Login (email or phone number): "
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
@@ -99,3 +111,20 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  users:
+    omniauth_callbacks:
+      facebook:
+        add_success: "Add success linked social "
+        account: "This account social "
+        notice: " have not yet linking with website"
+        linking_was_exist: "Linking social was exist"
+      google_oauth2:
+        add_success: "Add success linked social "
+        account: "This account social "
+        notice: " have not yet linking with website"
+        linking_was_exist: "Linking social was exist"
+      twitter:
+        add_success: "Add success linked social "
+        account: "This account social "
+        notice: " have not yet linking with website"
+        linking_was_exist: "Linking social was exist"
