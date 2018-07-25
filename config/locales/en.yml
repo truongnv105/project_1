@@ -48,3 +48,7 @@ en:
         invalid_data: "Email/password invalid"
       destroy:
         logout_success: "You have just logout success!"
+  providers:
+    destroy:
+      disable_linking_success: "Disable success linking with social with website"
+      linking_not_exist: "Tai khoan lien ket da bi xoa truoc do!"

@@ -96,3 +96,18 @@ footer {
 img {
   border-radius: 25px;
 }
+
+.font-size-icon {
+  font-size: 40px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+table.socials-linked {
+  width: 100%;
+  th, td {
+    border: 1px solid $gray-light;
+    text-align: center;
+    padding: 5px;
+  }
+}

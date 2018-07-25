@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-5 col-md-offset-1">
     <h2><%= t ".edit" %><%= resource_name.to_s.humanize %></h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="field form-group">
@@ -19,6 +19,9 @@
         <%= f.label :email, t(".email") %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: t(".email"), class: "form-control" %>
       </div>
+
+      <p><%= f.label :phone_number, t(".phone_number") %><br />
+      <%= f.text_field :phone_number, class: "form-control" %></p>
 
       <div class="field form-group">
         <%= f.label :avatar, t(".avatar") %><br />
@@ -43,6 +46,11 @@
         <%= f.password_field :password_confirmation, autocomplete: t(".offs"), class: "form-control" %>
       </div>
 
+      <div class="field form-group">
+        <%= f.label :current_password, t(".current_password") %> <i>(<%= t ".require_current_password" %>)</i><br />
+        <%= f.password_field :current_password, class: "form-control", autocomplete: t(".offs") %>
+      </div>
+
       <div class="actions">
         <%= f.submit t(".update"), class: "btn btn-primary" %>
       </div>
@@ -53,6 +61,36 @@
     <p><%= t ".unhappy" %><%= button_to t(".cancel_account"), registration_path(resource_name),
       data: { confirm: t(".you_sure") }, class: "btn btn-danger", method: :delete %></p>
 
-    <%= link_to t(".back"), :back %>
+    <%= link_to user_facebook_omniauth_authorize_path, class: "font-size-icon", title: t(".linking_facebook") do %>
+      <i class="fa fa-facebook"></i>
+    <% end %>
+    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "font-size-icon", title: t(".linking_google") do %>
+      <i class="fa fa-google"></i>
+    <% end %>
+    <%= link_to user_twitter_omniauth_authorize_path, class: "font-size-icon", title: t(".linking_twitter") do %>
+      <i class="fa fa-twitter"></i>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <h2><%= t ".social_linked" %></h2>
+    <table class="socials-linked">
+      <tr>
+        <th><%= t ".stt" %></th>
+        <th><%= t ".social" %></th>
+        <th><%= t ".email" %></th>
+        <th><%= t ".action" %></th>
+      </tr>
+      <% resource.providers.each.with_index 1 do |account, key| %>
+        <tr>
+          <td><%= key %></td>
+          <td><%= account.provider %></td>
+          <td><%= account.email %></td>
+          <td>
+            <%= link_to t(".disable"), provider_path(account.id), method: :delete,
+              data: {confirm: t(".you_sure")}, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
