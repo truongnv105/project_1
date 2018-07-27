@@ -15,7 +15,7 @@
       <div class="card card-login mx-auto mt-5">
         <div class="card-header"><%= t ".login" %></div>
         <div class="card-body">
-          <%= form_for(:session, url: admin_login_url) do |f| %>
+          <%= form_for(:session, url: admins_login_url) do |f| %>
             <div class="form-group">
               <%= f.label :email, t(".email") %>
               <%= f.email_field :email, class: "form-control" %>
