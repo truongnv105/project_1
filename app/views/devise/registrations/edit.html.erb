@@ -86,7 +86,7 @@
           <td><%= account.provider %></td>
           <td><%= account.email %></td>
           <td>
-            <%= link_to t(".disable"), provider_path(account.id), method: :delete,
+            <%= link_to t(".disable"), users_provider_path(account.id), method: :delete,
               data: {confirm: t(".you_sure")}, class: "btn btn-danger" %>
           </td>
         </tr>

@@ -14,7 +14,7 @@
       <td><%= user.email %></td>
       <td><%= image_tag user.avatar.url, size: Settings.users.avatar.size if user.avatar.present? %></td>
       <td>
-        <%= link_to admin_user_path(user.id), title: t(".show_user") do%>
+        <%= link_to admins_user_path(user.id), title: t(".show_user") do%>
           <i class="fa fa-eye"></i>
         <% end %>
       </td>
@@ -24,7 +24,7 @@
         <% end %>
       </td>
       <td>
-        <%= link_to admin_user_path(user.id), method: :delete, data: {confirm: t(".you_sure")},
+        <%= link_to admins_user_path(user.id), method: :delete, data: {confirm: t(".you_sure")},
           title: t(".you_sure") do %>
           <i class="fa fa-trash"></i>
         <% end %>
